@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Portaille de Connexion</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.ico"/>
+        <meta charset="UTF-8">
+        <meta name="author" lang="fr" content="SAUTIER Sebastien">
+        <meta name="lang" content="fr">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+            :root {
+                --backColor: rgb(200, 222, 255);
+                --backDarkColor: rgb(49, 86, 143);
+                --borderColor: rgb(22, 44, 77);
+            }
+            body {
+                background-color: white;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+            h1 {
+                margin: 40px;
+                font-size: 55px;
+                text-decoration: underline;
+            }
+            #connection {
+                background-color: var(--backColor);
+                border: solid 2px;
+                border-color: var(--borderColor);
+                border-radius: 10px;
+                width: 250px;
+                height: 150px;
+                position: absolute;
+                top: 30%;
+                padding: 15px;
+            }
+            form {
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+            }
+            form p {
+                font-size: 18px;
+                align-self: flex-start;
+                transition-duration: 0.2s;
+            }
+            form div {
+                margin-bottom: 5px;
+                width: 100%;
+            }
+            form div:hover p{
+                font-size: 20px;
+                width: 100%;
+                transition-duration: 0.2s;
+            }
+            form div input{
+                background-color: var(--backDarkColor);
+                border: solid 2px;
+                border-color: var(--borderColor);
+                border-radius: 5px;
+                color: white;
+                font-size: 15px;
+                font-weight: 300;
+                width: 100%;
+                height: 20px;
+            }
+            form button {
+                background-color: var(--backDarkColor);
+                border: solid 2px;
+                border-color: var(--borderColor);
+                border-radius: 5px;
+                color: white;
+                font-size: 15px;
+                font-weight: 300;
+                width: 50%;
+                height: 25px;
+                transition-duration: 0.5s;
+            }
+            form button:hover {
+                background-color: var(--borderColor);
+                cursor: pointer;
+                font-size: 18px;
+                font-weight: 350;
+                width: 65%;
+                height: 30px;
+                transition-duration: 0.5s;
+            }
+            #infoPublique {
+                position: absolute;
+                bottom: 5%;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>Hôpital de Paris</h1>
+        <div id="connection">
+            <form method="post" action="PHP/session.php">
+                <div id="id">
+                    <p>ID:</p>
+                    <input type="text" name="idzone">
+                </div>
+                <div id="password">
+                    <P>Mot de passe:</P>
+                    <input type="password" name="passzone">
+                </div>
+                <button type="submit">connection</button>
+            </form>
+        </div>
+        <a href="PHP/public.php" id="infoPublique">Information publique</a>
+    </body>
+</html>

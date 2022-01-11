@@ -1,0 +1,6 @@
+1.Platre.Point de suture.Infiltration.Radio.Depistage
+2.Chirurgie.Radio.Examen
+3.Craniatomie.Laminectomie.trepanation.Examen
+4.Chirurie.Reanimation.Point de suture
+5.Cardioversion.Transplantation.Chirurgie cardiaque.Instalation d un DCI
+6.IRM.Scanner.Radio.Ecographie
